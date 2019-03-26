@@ -1,0 +1,5 @@
+<div class="task__item">
+	<span class="task__text" [ngClass]="{ completed: isTaskCompleted }">{{ task.text }}</span>
+	<button id="deleteTask" (click)="deleteTask()">Delete</button>
+	<button id="completeTask" (click)="completeTask()">Complete</button>
+</div>
