@@ -1,0 +1,8 @@
+<div class="task__list">   
+  <app-todo-item 
+  	(onDeleteTask)="deleteFromTasksList($event)"
+  	(onCompleteTask)="completeTaskInList($event)"
+  	*ngFor="let task of tasksArray"
+  	[task]="task"
+  ></app-todo-item>
+</div>
