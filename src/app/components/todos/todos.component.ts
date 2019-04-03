@@ -6,10 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./todos.component.css']
 })
 export class TodosComponent implements OnInit {
-	@Input() taskId: number;
-	@Input() taskText: string;
-	@Input() taskComplete: boolean;
-	
+		
 	tasksArray: Task[] = [
 		{
 			id: 1,
@@ -35,13 +32,16 @@ export class TodosComponent implements OnInit {
 
 	deleteFromTasksList(taskId: number) {
 		for (let i = 0; i < this.tasksArray.length; i++)
-			if (this.tasksArray[i].id == taskId) this.tasksArray.splice(i, 1);
+			if (this.tasksArray[i].id == taskId) {
+				this.tasksArray.splice(i, 1);
+			} 
 	}
 
 	completeTaskInList(taskId: number) {
 		for (let i = 0; i < this.tasksArray.length; i++)
 			if (this.tasksArray[i].id == taskId) {
 				this.tasksArray[i].completed = true;
+				break;
 			} 
 	}
 

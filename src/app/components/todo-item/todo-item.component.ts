@@ -6,7 +6,7 @@ import {Component, OnInit, Input, Output, EventEmitter, OnDestroy} from '@angula
   styleUrls: ['./todo-item.component.css']
 })
 export class TodoItemComponent implements OnInit {
-	isTaskCompleted = false;
+	//isTaskCompleted = false;
 	@Input() task: Task;
 	@Output() onDeleteTask: EventEmitter<number> = new EventEmitter<number>();
 	@Output() onCompleteTask: EventEmitter<number> = new EventEmitter<number>();
@@ -21,7 +21,7 @@ export class TodoItemComponent implements OnInit {
 	}
 
 	completeTask() {
-		this.isTaskCompleted = !this.isTaskCompleted;
+		//this.isTaskCompleted = !this.isTaskCompleted;
 		this.onCompleteTask.emit(this.task.id);
 	}
 
